@@ -24,6 +24,13 @@ public class TipoAnimalService {
     }
 
     public TipoAnimalModel salvar(TipoAnimalModel tipoAnimalModel){
-        return repository.saveAll(tipoAnimalModel);
+        return repository.save(tipoAnimalModel);
     }
+
+    public void deletar(Long id){
+        repository.deleteById(id);
+    }
+
+    
+
 }
